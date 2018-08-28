@@ -1,0 +1,42 @@
+body {
+    padding-top: 20px;
+    font-family: 'Nosifer', cursive;
+    color: white;
+    font-size: 16px;
+    text-shadow: -2px 3px black;    
+    background: url('../images/sharks.jpg') no-repeat;
+    background-size: cover;
+}
+.container { 
+    text-align: center;
+    
+}
+.pad {
+    padding: 14px;
+    background-color: #000;
+    opacity: .7;
+}
+#gameover-image {
+    margin: 20px;
+    width: 400px;
+    height: 310px;
+}
+#youwin-image {
+    margin: 20px;
+    width: 400px;
+    height: 310px;
+}
+#currentWord {
+    letter-spacing: 10px;
+}
+#pressKeyTryAgain {
+    color:red;
+    margin-right: 86px;
+}
+#youwin-image { display: none;}
+.gameplay-column {
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 0px;
+    min-height: 500px;
+}
