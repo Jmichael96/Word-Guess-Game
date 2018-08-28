@@ -17,7 +17,7 @@ var selectableWords =
         "reef",
     ];
 
-const maxTries = 11;
+var maxTries = 11;
 
 var guessedLetters = [];
 var guessingWord = [];      
