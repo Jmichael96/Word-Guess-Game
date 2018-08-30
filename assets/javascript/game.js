@@ -58,7 +58,7 @@ function resetGame() {
     document.getElementById("gameover-image").style.cssText = "display: none";
     document.getElementById("youwin-image").style.cssText = "display: none";
     updateDisplay();
-    console.log(currentWordIndex + guessingWord);
+    console.log(currentWordIndex + selectableWords);
 };
 
 
