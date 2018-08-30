@@ -15,6 +15,14 @@ var selectableWords =
         "blue",
         "leopard",
         "reef",
+        "megamouth",
+        "goblin",
+        "basking",
+        "hound",
+        "zebra",
+        "carpet",
+        "angel",
+        "saw",
     ];
 console.log("My Shark list " + selectableWords );
 
