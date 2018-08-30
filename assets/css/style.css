@@ -34,6 +34,7 @@ body {
 }
 #currentWord {
     letter-spacing: 10px;
+    color: red;
 }
 #lose {
     color:red;
@@ -50,4 +51,10 @@ body {
     text-align: center;
     margin-top: 0px;
     min-height: 500px;
+}
+footer {
+    background-color: #000;
+    opacity: .7;
+    padding: 14px;
+    color: red;
 }

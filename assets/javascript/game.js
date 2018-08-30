@@ -1,5 +1,5 @@
 
-//my SHARK lists :P
+
 var selectableWords = 
     [
         "bamboo",
@@ -16,6 +16,7 @@ var selectableWords =
         "leopard",
         "reef",
     ];
+console.log("My Shark list " + selectableWords );
 
 var maxTries = 11;
 
@@ -49,8 +50,7 @@ function resetGame() {
     document.getElementById("gameover-image").style.cssText = "display: none";
     document.getElementById("youwin-image").style.cssText = "display: none";
     updateDisplay();
-    console.log(currentWordIndex);  
-
+    console.log(currentWordIndex + guessingWord);
 };
 
 
@@ -109,7 +109,6 @@ function makeGuess(letter) {
 
 function evaluateGuess(letter) {
     var positions = [];
-
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
         if(selectableWords[currentWordIndex][i] === letter) {
             positions.push(i);
