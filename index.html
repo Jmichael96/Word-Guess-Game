@@ -14,18 +14,23 @@
 </head>
 
 <body>
+
     <header class="container col-md-6"><h1>Guess the type of shark!</h1></header>
     <div class="container">
         <div class="row">
             <div class="container text-center col-md-6 gameplay-column">
+                <h2 id="lose">You lose!</h2>
                 <img id="gameover-image" src="assets/images/youlose.jpg" alt="Game Over Image" />
                 <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
                 <img id="youwin-image" src="assets/images/youwin.jpg" alt="You Win Image"/>
             </div>
             <div class="col-md-6 gameplay-column container font-bold">
                 <p class="pad" >Press Any Key to Get Started!</p>
+                <p class="pad" >You Lose!</p>
                 <p class="pad" >Wins</p>
                 <p class="pad" id="totalWins"></p>
+                <p class="pad" >losses</p>
+                <p class="pad" id="totalLosses"></p>
                 <p class="pad" >Current Word</p>
                 <p class="pad" id="currentWord"></p>
                 <p class="pad" >Guesses Remaining</p>

@@ -24,7 +24,10 @@ var guessingWord = [];
 var gameStarted = false;  
 var hasFinished = false;          
 var wins = 0; 
+var losses = 0;
 
+var winning = new Audio("./assets/audio/bubbles.mp3");
+var losing = new Audio("./assets/audio/waterphone.mp3");
 
 function resetGame() {
     remainingGuesses = maxTries;
@@ -39,9 +42,11 @@ function resetGame() {
         guessingWord.push("_");
     }
     document.getElementById("pressKeyTryAgain").style.cssText= "display: none";
+    document.getElementById("lose").style.cssText= "display: none";
     document.getElementById("gameover-image").style.cssText = "display: none";
     document.getElementById("youwin-image").style.cssText = "display: none";
     updateDisplay();
+    console.log("game reset");    
 };
 
 
@@ -52,9 +57,15 @@ function updateDisplay() {
     for (var i = 0; i < guessingWord.length; i++) {
         document.getElementById("currentWord").innerText += guessingWord[i];
     }
+    document.getElementById("totalLosses").innerText = losses;
+    document.getElementById("currentWord").innerText = "";
+    for (var i = 0; i < guessingWord.length; i++) {
+        document.getElementById("currentWord").innerText += guessingWord[i];
+    }
     document.getElementById("remainingGuesses").innerText = remainingGuesses;
     document.getElementById("guessedLetters").innerText = guessedLetters;
     if(remainingGuesses <= 0) {
+        document.getElementById("lose").style.cssText= "display: none";
         document.getElementById("gameover-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display: block";
         hasFinished = true;
@@ -90,6 +101,7 @@ function makeGuess(letter) {
     
     updateDisplay();
     checkWin();
+    checkLosses();
 };
 
 function evaluateGuess(letter) {
@@ -116,6 +128,16 @@ function checkWin() {
         document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText= "display: block";
         wins++;
+        winning.play();
         hasFinished = true;
+    }
+};
+function checkLosses() {
+    if(guessingWord.indexOf("_") === -1) {
+    document.getElementById("gameover-image").style.cssText = "display: block";
+    document.getElementById("lose").cssText = "display: block";
+    losses++;
+    losing.play();
+    hasFinished = true;
     }
 };
