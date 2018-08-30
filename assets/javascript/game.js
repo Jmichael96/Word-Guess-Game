@@ -72,7 +72,7 @@ function updateDisplay() {
         document.getElementById("lose").style.cssText= "display: none";
         document.getElementById("gameover-image").style.cssText = "display: block";
         hasFinished = true;
-}
+    }
 };
 
 
