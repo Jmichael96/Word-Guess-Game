@@ -93,6 +93,7 @@ document.onkeyup = function(event) {
  
         if(event.keyCode >= 65 && event.keyCode <= 90) {
             makeGuess(event.key.toLowerCase());
+            console.log(event);
         }
     }
 };
