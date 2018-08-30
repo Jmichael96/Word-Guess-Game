@@ -38,6 +38,9 @@ function resetGame() {
     guessedLetters = [];
     guessingWord = [];
 
+    winning.pause();
+    losing.pause();
+
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
@@ -46,7 +49,8 @@ function resetGame() {
     document.getElementById("gameover-image").style.cssText = "display: none";
     document.getElementById("youwin-image").style.cssText = "display: none";
     updateDisplay();
-    console.log("game reset");    
+    console.log(currentWordIndex);  
+
 };
 
 
@@ -67,7 +71,6 @@ function updateDisplay() {
     if(remainingGuesses <= 0) {
         document.getElementById("lose").style.cssText= "display: none";
         document.getElementById("gameover-image").style.cssText = "display: block";
-        document.getElementById("pressKeyTryAgain").style.cssText = "display: block";
         hasFinished = true;
 }
 };
@@ -133,9 +136,9 @@ function checkWin() {
     }
 };
 function checkLosses() {
-    if(guessingWord.indexOf("_") === -1) {
+    if(remainingGuesses <= 0) {
     document.getElementById("gameover-image").style.cssText = "display: block";
-    document.getElementById("lose").cssText = "display: block";
+    document.getElementById("lose").style.cssText = "display: block";
     losses++;
     losing.play();
     hasFinished = true;

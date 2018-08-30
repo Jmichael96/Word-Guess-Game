@@ -16,22 +16,33 @@ body {
     background-color: #000;
     opacity: .7;
 }
+#activity{
+    margin-top: -291px;
+}
 #gameover-image {
-    margin: 20px;
-    width: 400px;
-    height: 310px;
+    margin: 5px;
+    margin-left: 112px;
+    width: 300;
+    height: 210px;
 }
 #youwin-image {
-    margin: 20px;
-    width: 400px;
-    height: 310px;
+    margin: 5px;
+    margin-left: 112px;
+    width: 300px;
+    height: 210px;
+    
 }
 #currentWord {
     letter-spacing: 10px;
 }
+#lose {
+    color:red;
+    margin-right: -10px;
+}
 #pressKeyTryAgain {
     color:red;
-    margin-right: 86px;
+    margin-right: -10px;
+    font-size: 27px;
 }
 #youwin-image { display: none;}
 .gameplay-column {
