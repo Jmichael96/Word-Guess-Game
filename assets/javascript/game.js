@@ -93,7 +93,7 @@ document.onkeyup = function(event) {
  
         if(event.keyCode >= 65 && event.keyCode <= 90) {
             makeGuess(event.key.toLowerCase());
-            console.log(event);
+            console.log(event.key);
         }
     }
 };
@@ -118,6 +118,7 @@ function makeGuess(letter) {
 
 function evaluateGuess(letter) {
     var positions = [];
+    console.log(positions - remainingGuesses);
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
         if(selectableWords[currentWordIndex][i] === letter) {
             positions.push(i);
@@ -141,6 +142,7 @@ function checkWin() {
         wins++;
         winning.play();
         hasFinished = true;
+        console.log("total wins = " + wins + " You win!");
     }
 };
 function checkLosses() {
@@ -150,5 +152,6 @@ function checkLosses() {
     losses++;
     losing.play();
     hasFinished = true;
+    console.log("total losses = " + losses + " You lose!");
     }
 };
