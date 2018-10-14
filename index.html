@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SHARK!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        crossorigin="anonymous">
+    <!--   bootstrap css cdn   -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" crossorigin="anonymous">
+    <!--   css link   -->
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <!--   google font link   -->
     <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+    <!--   javascript link   -->
     <script src="assets/javascript/game.js" type="text/javascript"></script>
 </head>
-
 <body>
-
     <header class="container col-md-6"><h1>Guess the type of shark!</h1></header>
+    <!--   where the winning and losing information displays   -->
     <div class="container">
         <div class="row">
             <div class="container text-center col-md-6 gameplay-column">
@@ -24,6 +26,7 @@
                 <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
                 <img id="youwin-image" class="rounded" src="assets/images/youwin.jpg" alt="You Win Image"/>
             </div>
+            <!--  the gameplay column for one side -->
             <div class="col-md-6 gameplay-column container font-bold">
                 <p class="pad rounded" >Press Any Key to Get Started!</p>
                 <p class="pad rounded" >You Lose!</p>
@@ -36,6 +39,7 @@
             </div>
         </div>
     </div>
+    <!--   gameplay column for one side   -->
     <div class="container" id="activity">
         <div class="col-md-6 gameplay-column">
             <p class="pad rounded" >Guesses Remaining</p>
@@ -49,13 +53,15 @@
         resetGame();
         updateDisplay();
     </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--   ajax cdn   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <!--   jquery cdn   -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--     ajax popper     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!--     bootstrap javascript cdn     -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <footer class="text-center fixed-bottom">Copyright &copy; </footer>
-
 </body>
-
 </html>
