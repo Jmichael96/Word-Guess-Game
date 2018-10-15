@@ -9,8 +9,8 @@ body {
 }
 .container { 
     text-align: center;
-    
 }
+/* game pad */
 .pad {
     padding: 14px;
     background-color: #000;
@@ -30,7 +30,6 @@ body {
     margin-left: 112px;
     width: 300px;
     height: 210px;
-    
 }
 #currentWord {
     letter-spacing: 10px;
