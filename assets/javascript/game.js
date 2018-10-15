@@ -1,5 +1,5 @@
 
-
+// the array with all guessing words
 var selectableWords = 
     [
         "bamboo",
@@ -25,9 +25,8 @@ var selectableWords =
         "saw",
     ];
 console.log("My Shark list " + selectableWords );
-
+//global variables
 var maxTries = 11;
-
 var guessedLetters = [];
 var guessingWord = [];      
 var gameStarted = false;  
@@ -38,10 +37,11 @@ var losses = 0;
 var winning = new Audio("./assets/audio/bubbles.mp3");
 var losing = new Audio("./assets/audio/waterphone.mp3");
 
+// the reset game function
 function resetGame() {
     remainingGuesses = maxTries;
     gameStarted = false;
-
+    // the call that chooses the random guess word
     currentWordIndex = Math.floor(Math.random() * (selectableWords.length));
 
     guessedLetters = [];
@@ -49,7 +49,7 @@ function resetGame() {
 
     winning.pause();
     losing.pause();
-
+    //the loop that pushes the guessing word for the user to guess
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
@@ -61,26 +61,29 @@ function resetGame() {
     console.log(currentWordIndex + selectableWords);
 };
 
-
+// the display function
 function updateDisplay() {
-
+    //updates the display of wins and the current word text
     document.getElementById("totalWins").innerText = wins;
     document.getElementById("currentWord").innerText = "";
     for (var i = 0; i < guessingWord.length; i++) {
         document.getElementById("currentWord").innerText += guessingWord[i];
-    }
+    };
+    //updates the losses and the current word text
     document.getElementById("totalLosses").innerText = losses;
     document.getElementById("currentWord").innerText = "";
     for (var i = 0; i < guessingWord.length; i++) {
         document.getElementById("currentWord").innerText += guessingWord[i];
-    }
+    };
+    //updates the remaining guesses (11) and the guessed letters
     document.getElementById("remainingGuesses").innerText = remainingGuesses;
     document.getElementById("guessedLetters").innerText = guessedLetters;
     if(remainingGuesses <= 0) {
+        //if you lose you get the game over page
         document.getElementById("lose").style.cssText= "display: none";
         document.getElementById("gameover-image").style.cssText = "display: block";
         hasFinished = true;
-    }
+    };
 };
 
 
@@ -94,8 +97,8 @@ document.onkeyup = function(event) {
         if(event.keyCode >= 65 && event.keyCode <= 90) {
             makeGuess(event.key.toLowerCase());
             console.log(event.key);
-        }
-    }
+        };
+    };
 };
 
 function makeGuess(letter) {
@@ -109,7 +112,7 @@ function makeGuess(letter) {
             guessedLetters.push(letter);
             evaluateGuess(letter);
         }
-    }
+    };
     
     updateDisplay();
     checkWin();
@@ -132,9 +135,9 @@ function evaluateGuess(letter) {
         for(var i = 0; i < positions.length; i++) {
             guessingWord[positions[i]] = letter;
         }
-    }
+    };
 };
-
+//function that updates all the win effects
 function checkWin() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("youwin-image").style.cssText = "display: block";
@@ -145,6 +148,7 @@ function checkWin() {
         console.log("total wins = " + wins + " You win!");
     }
 };
+//function that updates all of the lost effects
 function checkLosses() {
     if(remainingGuesses <= 0) {
     document.getElementById("gameover-image").style.cssText = "display: block";
