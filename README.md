@@ -2,7 +2,8 @@
 
 ## [Click](https://jmichael96.github.io/Word-Guess-Game/) to play!
 ## ABOUT
-This game's logic is implemented with raw JavaScript.
+This game's logic is implemented with raw JavaScript. The largest obsticle I had during this assignment was 
+correctly displaying the winning/losing image and text in the correct spot after each round finished. Eventually found out I was 
 
 ## HOW TO PLAY
 Simply just touch a key to start the game. The theme is about sharks so try and guess the name of each shark!
